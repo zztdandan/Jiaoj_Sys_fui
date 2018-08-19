@@ -1,0 +1,97 @@
+{
+    "node_cate": "start",
+    "case_id":"1",
+    "notification_title":"申请须知",
+    "notification":"<div style='overflow:auto;' hei><p>段落1段落1段落1段落1段落1段落1段落1段落1段落1段落1段落1段落1段落1段落1段落1段落1段落1段落1段落1段落1段落1段落1段落1段落1段落1段落1段落1段落1段落1段落1段落1段落1段落1段落1</p><p>段落2段落2段落2段落2段落2段落2段落2段落2段落2段落2段落2段落2段落2段落2段落2段落2段落2段落2段落2段落2段落2段落2段落2段落2</p><p>段落3</p><p>段落4</p></div>" ,   
+    "UserSubForm": [
+        {
+            "type": "text",
+            "label": "姓名",
+            "id": "name",
+            "data-type": "string",
+            "data-length": "0,20"
+        },
+        {
+            "type": "text",
+            "label": "身份证号码",
+            "id": "identity",
+            "data-type": "string",
+            "data-length": "13,13",
+            "data-char-limit": "[0-9]"
+        },
+        {
+            "type": "picture-modal",
+            "label": "身份证(正面)",
+            "id": "identity_img_front",
+            "data-type": "image",
+            "data-example-url": "/file_manager/load?id=jsrsfzzm"
+        },
+        {
+            "type": "picture-modal",
+            "label": "身份证(反面)",
+            "id": "identity_img_back",
+            "data-type": "image",
+            "data-example-url": "/file_manager/load?id=jsrsfzfm"
+        },
+        {
+            "type": "picture-modal",
+            "label": "身份证复印件",
+            "id": "identity_img_copy",
+            "data-type": "image",
+            "data-example-url": "/file_manager/load?id=jsrsfz"
+        },
+        {
+            "type": "picture-modal",
+            "label": "一寸白底照片",
+            "id": "person_pic_white",
+            "data-type": "image",
+            "data-example-url": "/file_manager/load?id=yczp"
+        },
+        {
+            "type": "picture-modal",
+            "label": "遗失证明",
+            "id": "lost_prove",
+            "data-type": "image",
+            "data-example-url": "/file_manager/load?id=yszm"
+        }
+    ],
+    "Return_json": {
+        "form": [
+            {
+                "label": "姓名",
+                "id": "name",
+                "value": ""
+            },
+            {
+                "label": "身份证号码",
+                "id": "identity",
+                "value": ""
+            },
+            {
+                "label": "身份证(正面)",
+                "id": "identity_img_front",
+                "value": ""
+            },
+            {
+                "label": "身份证(反面)",
+                "id": "identity_img_back",
+                "value": ""
+            },
+            {
+                "label": "身份证复印件",
+                "id": "identity_img_copy",
+                "value": ""
+            },
+            {
+                "label": "一寸白底照片",
+                "id": "person_pic_white",
+                "value": ""
+            },
+            {
+                "label": "遗失证明",
+                "id": "lost_prove",
+                "value": ""
+            }
+        ]
+    }
+}

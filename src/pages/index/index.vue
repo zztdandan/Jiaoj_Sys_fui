@@ -1,13 +1,31 @@
 <template>
-  <div id="app">
-    <img src="../../assets/logo.png">
-    <router-view></router-view>
-  </div>
+
+    <!-- 首页 -->
+    <div id="app" class="page">
+        <!-- 页头页脚 -->
+        <div id="vuecontent">
+            <simple-header ti="柳州交警"></simple-header>
+            <simple-footer></simple-footer>
+            <div class="content">
+                   <router-view></router-view>
+            </div>
+        </div>
+    </div>
+
+
 </template>
 
 <script>
+import MobileFooter from 'components/Common_comp/MobileFooter';
+import MobileHeader from 'components/Common_comp/MobileHeader';
+
+
 export default {
-  name: 'app'
+  name: 'app',
+  components:{
+   'simple-header':MobileHeader ,
+   'simple-footer':MobileFooter
+  }
 }
 </script>
 

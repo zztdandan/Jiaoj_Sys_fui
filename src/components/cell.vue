@@ -7,7 +7,7 @@
 <script>
 export default {
   name: 'cell',
-  data () {
+  data:function () {
     return {
       msg: '多页面测试'
     }

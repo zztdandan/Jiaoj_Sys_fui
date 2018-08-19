@@ -22,7 +22,8 @@ module.exports = {
       'vue$': 'vue/dist/vue.esm.js',
       '@': resolve('src'),
       'pages': resolve('src/pages'),
-      'components': resolve('src/components')
+      'components': resolve('src/components'),
+      'alight7':resolve('node_modules/light7')
     }
   },
   module: {
@@ -34,7 +35,7 @@ module.exports = {
     {
       test: /\.js$/,
       loader: 'babel-loader',
-      include: [resolve('src'), resolve('test')]
+      include: [resolve('src'), resolve('test'),resolve('src/pages/cell') ]
     },
     {
       test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
