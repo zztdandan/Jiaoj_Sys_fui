@@ -1,9 +1,9 @@
 <template>
 
     <!-- 首页 -->
-    <div id="app" class="page">
+    <div id="app">
         <!-- 页头页脚 -->
-        <div id="vuecontent">
+        <div id="vuecontent" class="page">
             <simple-header ti="柳州交警"></simple-header>
             <simple-footer></simple-footer>
             <div class="content">
