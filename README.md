@@ -1,24 +1,21 @@
-最近一直在研究使用vue做出来一些东西，但都是SPA的单页面应用，但实际工作中，单页面并不一定符合业务需求，所以这篇我就来说说怎么开发多页面的Vue应用，以及在这个过程会遇到的问题。
-
+交警前端前后端分离开发
+--------------------
 
 # 准备工作
 
-在本地用`vue-cli`新建一个项目，这个步骤vue的官网上有，我就不再说了。
+将后端部署在腾讯云，已完成
+前端踩坑，已完成。light7成功部署，mpa成功部署，vue-router成功部署
 
-这里有一个地方需要改一下，在执行`npm install`命令之前，在`package.json`里添加一个依赖,后面会用到。
 
-![](http://onsmpwfeh.bkt.clouddn.com/15058154261893.jpg)
+# 作业计划
 
-# 修改webpack配置
-
-这里展示一下我的项目目录
-
+页面结构大概如下
 ```
-├── README.md
-├── build
-│   ├── build.js
-│   ├── check-versions.js
-│   ├── dev-client.js
+首页index
+├── 首页页面
+│   ├── imageblock
+│   ├── case_menu_block整个case表示窗口
+│   |   ├── single_
 │   ├── dev-server.js
 │   ├── utils.js
 │   ├── vue-loader.conf.js
@@ -47,7 +44,7 @@
 │           ├── index.vue
 │           └── router
 │               └── index.js
-└── static
+└── 页头页脚
 ```
 
 在这一步里我们需要改动的文件都在`build`文件下，分别是：

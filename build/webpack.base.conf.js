@@ -23,7 +23,7 @@ module.exports = {
       '@': resolve('src'),
       'pages': resolve('src/pages'),
       'components': resolve('src/components'),
-      'alight7':resolve('node_modules/light7')
+      '#static':path.join(process.cwd(),'static')
     }
   },
   module: {

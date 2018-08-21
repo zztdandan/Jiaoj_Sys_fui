@@ -1,8 +1,8 @@
 
 
 <template>
-    <!-- 里面会包含一个input,具体由:is 指定 -->
-    <div id="listcon">
+    <!-- 这个控件表示从li这一级别开始构建 -->
+    <div>
         <li v-if="visi">
             <div class="item-inner">
                 <div class="item-title label">{{list_label}}</div>
@@ -12,8 +12,7 @@
             </div>
         </li>
         <li v-else style="display:none">
-            <input-container :params="cildparams">
-            </input-container>
+           <input :is="component" :params="params" />
         </li>
     </div>
 
@@ -22,9 +21,10 @@
     import path from "path";
     import NumberInput from "./NumberInput.vue";
     import PictureModalInput from "./PictureModalInput.vue";
-    import SubmitInput from "./SubmitInpute.vue";
+    import SubmitInput from "./SubmitInput.vue";
     import TextInput from "./TextInput.vue";
     import VisiInput from "./VisiInput.vue";
+    import PasswordInput from "./PasswordInput.vue";
     export default {
       name: "list-container",
       props: ["params"],
@@ -32,8 +32,10 @@
         "text-input": TextInput,
         "number-input": NumberInput,
         "submit-input": SubmitInput,
+        "reset-input": SubmitInput,
         "picture-modal-input": PictureModalInput,
-        "visi-input": VisiInput
+        "visi-input": VisiInput,
+        "password-input": PasswordInput
       },
       data: function() {
         var component_id = this.params.type + "-input";
@@ -45,9 +47,9 @@
     };
 </script>
 <style scoped>
-        input[type=button].button {
-            width: auto;
-        }
+input[type="button"].button {
+  width: auto;
+}
 </style>
 
 

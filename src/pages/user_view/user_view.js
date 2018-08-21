@@ -1,19 +1,22 @@
 // The Vue build version to load with the `import` command
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from "vue";
-import App from "./index.vue";
-import axios from 'axios';
+import App from "./user_view.vue";
+import store from './user_store/user_store';
 import router from "./router";
-import store from "./Vuex/store";
+import axios from 'axios';
 Vue.prototype.$ajax=axios;
-
-
 /* eslint-disable no-new */
-var vm = new Vue({
+var vm1 = new Vue({
   el: "#app",
-  router,
-  store, //使用store
+  store,//使用store
   template: "<App/>",
+  router,
+  data:function(){
+    return{
+      a:1,
+      b:2      
+    }
+  },
   components: { App }
 });
-console.log("首页渲染");
