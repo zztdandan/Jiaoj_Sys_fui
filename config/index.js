@@ -28,8 +28,9 @@ module.exports = {
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     proxyTable: {
-      '/api': { // api表示当前项目请求的key
-        target: 'http://140.143.26.135:3000', // 代理服务器路径
+      '/api': { // api表示当前项目请求使用该项可进入远程端访问
+        target: 'http://127.0.0.1:3000', // 本地理服务器路径
+        // target: 'http://140.143.26.135:3000', //远端 代理服务器路径
         pathRewrite: { '^/api': '/' }, // 重写路径
         changeOrigin: true
       }

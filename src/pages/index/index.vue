@@ -7,7 +7,6 @@
             <simple-header ti="柳州交警"></simple-header>
             <simple-footer></simple-footer>
             <div class="content">
-<a class="button button-primary button-rounded button-small">a</a>
                 <router-view></router-view>
             </div>
         </div>
@@ -18,7 +17,6 @@
 <script>
     import MobileFooter from "components/Common_comp/MobileFooter";
     import MobileHeader from "components/Common_comp/MobileHeader";
-
     export default {
       name: "app",
       created: function() {},

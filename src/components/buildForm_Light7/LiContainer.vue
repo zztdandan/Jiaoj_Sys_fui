@@ -25,6 +25,7 @@
     import TextInput from "./TextInput.vue";
     import VisiInput from "./VisiInput.vue";
     import PasswordInput from "./PasswordInput.vue";
+   
     export default {
       name: "list-container",
       props: ["params"],
@@ -41,7 +42,8 @@
         var component_id = this.params.type + "-input";
         return {
           list_label: this.params.label,
-          component: component_id
+          component: component_id,
+          visi:this.params.type!="visi"
         };
       }
     };

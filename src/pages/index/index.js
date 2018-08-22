@@ -5,6 +5,9 @@ import App from "./index.vue";
 import axios from 'axios';
 import router from "./router";
 import store from "./Vuex/store";
+// import light7 from '#static/light7/js/light7';
+import jqueryform from '#static/js/jquery.form';
+// import jqueryform from 'jquery-form';
 Vue.prototype.$ajax=axios;
 
 

@@ -1,39 +1,52 @@
 
 <template>
-    <div>
-
-    </div>
+  <div class="app-menu">
+    <image-block :imgurl="image_list"></image-block>
+    <case-menu-block v-for="one_cate in menu_list" v-bind:key="one_cate.name" :one_cate_case_obj="one_cate">      
+    </case-menu-block>
+  </div>
 </template>
 
 <script>
-    // 引入 axios
-    import axios from "axios";
-
-    export default {
-      name: "menu_app",
-      data: function() {
-        return {
-          menu_cate_list: [],
-          menu_list: []
-        };
-      },
-      computed: {
-        obj_menu_build: function() {
-          return this.menuid + 1;
-        }
-      },
-      created: function() {
-        //标准利用vuex读取axios的流程
-        this.$store.state.get_url = "/api/user_menu";
-        this.$store.commit("axios_get");
-        // console.log(1);
-        // console.log(this.$store.state.axios_getobj);
-        this.menu_list.push(this.$store.state.axios_getobj) ;
-        //读取目录列表完毕
-        //接下来读取大类列表
-        this.$store.state.get_url = "/api/user_menu/dic";
-        this.$store.commit("axios_get");
-        this.menu_cate_list.push(this.$store.state.axios_getobj);
+  // 引入 axios
+  import ImageBlock from "./ImageBlock";
+  import CateMenuBlock from "./CateMenuBlock";
+  export default {
+    name: "menu_app",
+    data: function() {
+      return {
+        menu_cate_list: [],
+        menu_list: [],
+        image_list: ["/static/home1.jpg"]
+      };
+    },
+    computed: {
+      obj_menu_build: function() {
+        return this.menuid + 1;
       }
-    };
+    },
+    mounted: function() {
+      //标准利用vuex读取axios的流程
+      var that = this;
+      this.$ajax.get("/api/user_menu/allmenu").then(function(res) {
+        if (!res) {
+          $.toast("无法读取菜单，等待修复");
+        }
+        if (!res.data.flag) {
+          $.toast("无法读取菜单，等待修复");
+        }
+        that.menu_list = res.data.data;
+      });
+    },
+    components: {
+      "image-block": ImageBlock,
+      "case-menu-block":CateMenuBlock
+    }
+  };
 </script>
+<style scoped>
+.app-menu{
+  overflow: overlay;
+}
+</style>
+
