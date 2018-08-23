@@ -4,7 +4,7 @@
     <div id="app">
         <!-- 页头页脚 -->
         <div id="vuecontent" class="page">
-            <simple-header ti="柳州交警"></simple-header>
+            <simple-header>{{title}}</simple-header>
             <simple-footer></simple-footer>
             <div class="content">
                 <router-view></router-view>
@@ -23,6 +23,16 @@
       components: {
         "simple-header": MobileHeader,
         "simple-footer": MobileFooter
+      },
+      computed:{
+          title:function(){
+              if(this.$store.state.menu_title){
+                  return this.$store.state.menu_title;
+              }
+              else{
+                  return "柳州交警"
+              }
+          }
       }
     };
 </script>

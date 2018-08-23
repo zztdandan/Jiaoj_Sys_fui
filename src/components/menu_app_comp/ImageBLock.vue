@@ -19,10 +19,11 @@
 
 <style scoped>
 img {
-  
+
   width:100%;
 }
 .img-block{
+    display:block;
   margin-left: 0.5rem;
   margin-right: 0.5rem;
 }

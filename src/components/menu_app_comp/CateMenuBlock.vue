@@ -1,4 +1,5 @@
 <template>
+  <!-- 每个大类卡片归类为一个组件 -->
   <div :id="cate_id">
     <card-common :title="case_title">
       <div class="row">
@@ -34,10 +35,10 @@
         has_add: this.one_cate_case_obj.has_add,
         more_item_detail: {
           MENU_TITLE: "更多业务",
-          MENU_CATE: "more_case",
+          MENU_CATE: this.one_cate_case_obj.c_name,
           MENU_URL: "/more_case",
-
-          MENU_CLASS: "icon iconfont icon-zhuxiao1 menu-icon hongse"
+          MENU_CLASS: "icon iconfont icon-zhuxiao1 menu-icon hongse",
+          MENU_LIST: this.more_case
         }
       };
     },
@@ -45,6 +46,8 @@
       this.more_case = this.one_cate_case_obj.more_menu.concat(
         this.one_cate_case_obj.show_menu
       );
+    },
+    computed: {
     },
     components: {
       "case-item": CaseItem,

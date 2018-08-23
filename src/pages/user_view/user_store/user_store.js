@@ -5,7 +5,7 @@ Vue.use(Vuex);
 Vue.config.productionTip = false;
 export default new Vuex.Store({
   state: {
-    vue_title: "柳州交警",
+    menu_title: "柳州交警",
     has_footer: true
   },
   mutations: {
@@ -13,8 +13,9 @@ export default new Vuex.Store({
     set_footer(state, bol) {
       state.has_footer = bol;
     },
-    set_title(state, title) {
-      state.vue_title = title;
+    do_change_title(state,data){
+      state.menu_title=data;
     }
+    
   }
 });

@@ -17,6 +17,11 @@ export default new Router({
       path: '/my_progress',
       name: 'my_progress',
       component:my_progress
+    },
+    {
+      path: '/case_start/:id',
+      name: 'case_start',
+      component:my_progress
     }
   ]
 })
