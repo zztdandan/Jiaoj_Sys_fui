@@ -57,7 +57,7 @@
         //  console.log("log22",that);
           console.log("lo33",this);
         // console.log(that.$emit);
-        this.$emit("receive_from_child", data);
+        this.$emit("receive_from_form", data);
       }
     },
     components: {

@@ -40,7 +40,6 @@
       }
     },
     created: function() {
-      window.location = "/#/login";
     }
   };
 </script>

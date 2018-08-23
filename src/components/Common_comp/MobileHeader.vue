@@ -1,7 +1,7 @@
 <template>
   <header class="bar bar-nav">
-    <button @click="goHome" class="button button-primary button-small pull-left">
-      回到首页
+    <button @click="goHome" class="button button-tiny button-jumbo pull-left">
+      首页
     </button>
     <h1 class="title"><slot></slot></h1>
   </header>

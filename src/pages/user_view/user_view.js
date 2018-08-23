@@ -5,6 +5,7 @@ import App from "./user_view.vue";
 import store from './user_store/user_store';
 import router from "./router";
 import axios from 'axios';
+import jqueryform from '#static/js/jquery.form';
 Vue.prototype.$ajax=axios;
 /* eslint-disable no-new */
 var vm1 = new Vue({
