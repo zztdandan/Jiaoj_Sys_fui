@@ -5,7 +5,6 @@
     <p style="margin:8px;display:inline-block">{{suc_flag}}</p>
     <!-- <light7-modal button_text="上传图片完毕" @receive_from_child="modal_return" :info="this.modal_info" :default_show="modal_show">
     </light7-modal> -->
-
   </div>
 </template>
 
@@ -46,13 +45,16 @@
           text: '请提交如下图所示样板的图片',
           afterText:
             `<form class="upload_pic" enctype="multipart/form-data">
-                    <img style="width:100%" src="` +
+                        <img style="width:100%" src="` +
             //!测试方便用固定值代替
             // this.params["data-example-url"] +
             '/api/file_manager/load?id=k1' +
             `"/>
-                    <input type="file" class="button button-action button-rounded" style="width:50%" name="image"/>
-                    </form>`,
+                <div class="button button-action button-rounded" style="text-align:center;width:100%">
+                <p class="abs-p">点击提交图片</p>
+                        <input type="file" class="img-modal-input" style="width:100%;opacity:0;" accept="image/jpg,image/jpeg,image/png" name="image"/>
+                        </div>
+                        </form>`,
           buttons: [
             {
               text: '返回提交'
@@ -74,9 +76,8 @@
                       //上传成功
                       that_vue.suc_flag = '成功';
                       that_vue.url_value = res.data.path;
-                      
                     } else {
-                      that_vue.suc_flag = '上传失败，原因：'+res.msg;
+                      that_vue.suc_flag = '上传失败，原因：' + res.msg;
                     }
                   }
                 });
@@ -101,5 +102,16 @@
   //图片上传modal，有触发函数
 </script>
 
-<style scoped>
+<style>
+input[type="file"].img-modal-input {
+display: block;
+width: 100%;
+position: absolute;
+left: 0px;
+}
+.abs-p{
+  position: absolute;
+text-align: center;
+}
+
 </style>

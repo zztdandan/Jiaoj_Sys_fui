@@ -4,24 +4,25 @@ import user_view from '@/components/user_view/user_view'
 import my_progress from '@/components/my_progress/my_progress'
 import CaseStart from 'components/user_case/CaseStart';
 import CaseNode from 'components/user_case/CaseNode';
-import CaseReview from 'components/user_case/CaseReview';
 // 如果在模块化构建系统中，请确保在开头调用了 Vue.use(Vuex)
 Vue.use(Router);
 
 export default new Router({
   routes: [
+    //首页
     {
       path: '/',
-      name: 'user_view',
+      name: 'admin_view',
       component: user_view
     },
+    //
     {
-      path: '/my_progress',
-      name: 'my_progress',
+      path: '/read_progress',
+      name: 'read',
       component:my_progress
     },
     {
-      path: '/case_start',
+      path: '/',
       name: 'case_start',
       component:CaseStart
     },
@@ -29,11 +30,6 @@ export default new Router({
       path: '/case_node',
       name: 'case_node',
       component:CaseNode
-    },
-    {
-      path: '/case_review',
-      name: 'case_review',
-      component:CaseReview
     }
   ]
 })

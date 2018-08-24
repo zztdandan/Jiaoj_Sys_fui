@@ -70,11 +70,19 @@
       'build-form': BuildForm
     },
     methods: {
-      modal_return: function() {
+      modal_return: function(data) {
         console.log('按钮回调成功');
       },
       form_return: function(a) {
-        console.log('form回调成功', a);
+      //  console.log('form回调成功', a);
+      if(a.flag){
+         this.$router.push({name:'case_review',query:{progress_id:a.data.REC_ID}});
+      }
+      else{
+        $.toast(a.msg);
+      }
+        // 跳转到业务概况查看页面，如果该业务可以进行下一步则在那个页面提示下一步操作
+        
       }
     }
   };
