@@ -14,6 +14,7 @@
   // 标准的array类输入格式:
   // { type: "visi", id: "case_id", value: "",label:"标题" }
   // 支持的type:picture-modal,text,submit,visi,number
+  import jqueryform from '#static/js/jquery.form';
   import LiContainer from "components/buildForm_Light7/LiContainer";
   export default {
     name: "build-form",

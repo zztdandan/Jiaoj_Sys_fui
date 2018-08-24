@@ -2,19 +2,19 @@
 
 <template>
     <!-- 这个控件表示从li这一级别开始构建 -->
-    <div>
-        <li v-if="visi">
+    <li>
+        <div v-if="visi">
             <div class="item-inner">
                 <div class="item-title label">{{list_label}}</div>
                 <div class="item-input">
                     <input :is="component" :params="params" />
                 </div>
             </div>
-        </li>
-        <li v-else style="display:none">
+        </div>
+        <div v-else style="display:none">
            <input :is="component" :params="params" />
-        </li>
-    </div>
+        </div>
+    </li>
 
 </template>
 <script>

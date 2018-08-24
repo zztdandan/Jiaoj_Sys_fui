@@ -16,6 +16,7 @@
 <script>
   import MobileFooter from "components/Common_comp/MobileFooter";
   import MobileHeader from "components/Common_comp/MobileHeader";
+  
 
   export default {
     name: "app",

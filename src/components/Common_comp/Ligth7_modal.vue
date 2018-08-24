@@ -1,12 +1,13 @@
 <template>
     <!-- 只实现简单无事件modal -->
-    <div>
-        <div class="modal modal-in" style="display: block;top:0px">
+    <div :id="this.info.id" :style="isshowblock">
+        <div class="modal modal-in" style="display:block;top:3%">
             <div class="modal-inner">
                 <div class="modal-title">
-                    <slot name="title"></slot>
+                    {{this.info.title}}
                 </div>
                 <div class="modal-text">
+                    <div v-html="this.info.text"></div>
                     <slot></slot>
                 </div>
             </div>
@@ -21,31 +22,65 @@
 <script>
     // import moduleName from "#static/light7/js/light7";
     export default {
-      name: "light7-modal",
+      name: 'light7-modal',
       props: {
         button_text: {
           type: String,
-          default: "确认"
+          default: '确认'
+        },
+
+        info: {
+          type: Object,
+          default: {}
+        },
+        //默认创建时是否即时显示
+        default_show: {
+          type: Boolean,
+          default: false
         }
       },
+      data: function() {
+        return {
+          now_show: this.default_show,
+          isshowblock:this.default_show ? 'display:block' : 'display:none'
+        };
+      },
       mounted: function() {
-        var s = parseFloat($(".modal-overlay").css("height"));
-        var sk = parseFloat($("form").css("height"));
-        $(".modal-overlay").css("height",sk*1.2);
-        $(".modal-text").css("height", s * 0.65);
-        $(".modal-text").css("overflow", "overlay");
+        //   if(this.show){
+        //        $("#"+this.info.id).css("display","block");
+        //   }
+        //   else{
+        //        $("#"+this.info.id).css("display","none");
+        //   }
+        var s = parseFloat($('.modal-overlay').css('height'));
+        var sk = parseFloat($('form').css('height'));
+        if (!sk) {
+          sk = s;
+        }
+        // $('.modal-overlay').css('height', sk * 1.1);
+        $('.modal-text').css('height', sk * 0.7);
+        $('.modal-text').css('overflow', 'overlay');
+      },
+      watch: {
+          default_show(newValue, oldValue) {
+              this.now_show=newValue;
+          }
+      },
+      computed: {
+       
       },
       methods: {
         button_click: function() {
-             $(".modal-overlay-visible").removeClass('modal-overlay-visible');
-             $(".modal-in").removeClass('modal-in');
-             this.$emit("receive_from_child");
+          //  $(".modal-overlay-visible").removeClass('modal-overlay-visible').css("display","none");
+          //  $(".modal-in").removeClass('modal-in').css("display","none");
+          $.closeModal();
+          this.$emit('receive_from_child');
         }
       }
     };
 </script>
 
-<style scoped>
+<style>
 .modal.modal-in {
   top: 1%;
   word-wrap: break-word;

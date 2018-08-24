@@ -15,8 +15,7 @@ var vm1 = new Vue({
   router,
   data:function(){
     return{
-      a:1,
-      b:2      
+      
     }
   },
   components: { App }
