@@ -16,7 +16,7 @@
       };
     },
     mounted: function() {
-      console.log(1);
+      // console.log(1);
       var s = parseFloat($(".new-btn").css("width"));
       $(".new-btn").css("height", s*1.2);
       $(".menu-icon").css("font-size", s * 0.75);

@@ -40,7 +40,7 @@
     methods: {
       LoginReturn: function(data) {
         $.toast("登陆成功");
-        History.go(-1);
+       history.go(-1)
       }
     }
   };

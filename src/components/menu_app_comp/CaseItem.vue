@@ -17,7 +17,7 @@
     },
 
     mounted: function() {
-      console.log(this.item_detail.MENU_URL + this.item_detail.MENU_ID);
+      // console.log(this.item_detail.MENU_URL + this.item_detail.MENU_ID);
       // console.log(1);
       var s = parseFloat($(".new-btn").css("width"));
       $(".new-btn").css("height", s*1.2);

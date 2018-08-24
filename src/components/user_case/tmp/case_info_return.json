@@ -1,0 +1,103 @@
+{
+  "flag": true,
+  "msg": "success",
+  "code": 0,
+  "data": {
+    "REC_ID": 1,
+    "CASE_NAME": "遗失补证",
+    "CASE_CATEGORY": "A",
+    "CASE_START_NODE": "1",
+    "node_list": [
+      {
+        "rec_id": 1,
+        "case_node_name": "遗失补证_用户填写表单",
+        "node_type": "USER_FORM_SUBMIT",
+        "node_detail": "{\r\n    \"notification_title\":\"申请须知\",\r\n    \"notification\":\"<div style='overflow:overlay;' hei><p>段落1段落1段落1段落1段落1段落1段落1段落1段落1段落1段落1段落1段落1段落1段落1段落1段落1段落1段落1段落1段落1段落1段落1段落1段落1段落1段落1段落1段落1段落1段落1段落1段落1段落1</p><p>段落2段落2段落2段落2段落2段落2段落2段落2段落2段落2段落2段落2段落2段落2段落2段落2段落2段落2段落2段落2段落2段落2段落2段落2</p><p>段落3</p><p>段落4</p></div>\" ,   \r\n    \"UserSubForm\": [\r\n        {\r\n            \"type\": \"text\",\r\n            \"label\": \"姓名\",\r\n            \"id\": \"name\",\r\n            \"data-type\": \"string\",\r\n            \"data-length\": \"0,20\"\r\n        },\r\n        {\r\n            \"type\": \"text\",\r\n            \"label\": \"身份证号码\",\r\n            \"id\": \"identity\",\r\n            \"data-type\": \"string\",\r\n            \"data-length\": \"13,13\",\r\n            \"data-char-limit\": \"[0-9]\"\r\n        },\r\n        {\r\n            \"type\": \"picture-modal\",\r\n            \"label\": \"身份证(正面)\",\r\n            \"id\": \"identity_img_front\",\r\n            \"data-type\": \"image\",\r\n            \"data-example-url\": \"/file_manager/load?id=jsrsfzzm\"\r\n        },\r\n        {\r\n            \"type\": \"picture-modal\",\r\n            \"label\": \"身份证(反面)\",\r\n            \"id\": \"identity_img_back\",\r\n            \"data-type\": \"image\",\r\n            \"data-example-url\": \"/file_manager/load?id=jsrsfzfm\"\r\n        },\r\n        {\r\n            \"type\": \"picture-modal\",\r\n            \"label\": \"身份证复印件\",\r\n            \"id\": \"identity_img_copy\",\r\n            \"data-type\": \"image\",\r\n            \"data-example-url\": \"/file_manager/load?id=jsrsfz\"\r\n        },\r\n        {\r\n            \"type\": \"picture-modal\",\r\n            \"label\": \"一寸白底照片\",\r\n            \"id\": \"person_pic_white\",\r\n            \"data-type\": \"image\",\r\n            \"data-example-url\": \"/file_manager/load?id=yczp\"\r\n        },\r\n        {\r\n            \"type\": \"picture-modal\",\r\n            \"label\": \"遗失证明\",\r\n            \"id\": \"lost_prove\",\r\n            \"data-type\": \"image\",\r\n            \"data-example-url\": \"/file_manager/load?id=yszm\"\r\n        }\r\n    ],\r\n    \"Return_json\": {\r\n        \"form\": [\r\n            {\r\n                \"label\": \"节点ID\",\r\n                \"id\": \"case_node_id\",\r\n                \"value\": \"\"\r\n            },\r\n            {\r\n                \"label\": \"姓名\",\r\n                \"id\": \"name\",\r\n                \"value\": \"\"\r\n            },\r\n            {\r\n                \"label\": \"身份证号码\",\r\n                \"id\": \"identity\",\r\n                \"value\": \"\"\r\n            },\r\n            {\r\n                \"label\": \"身份证(正面)\",\r\n                \"id\": \"identity_img_front\",\r\n                \"value\": \"\"\r\n            },\r\n            {\r\n                \"label\": \"身份证(反面)\",\r\n                \"id\": \"identity_img_back\",\r\n                \"value\": \"\"\r\n            },\r\n            {\r\n                \"label\": \"身份证复印件\",\r\n                \"id\": \"identity_img_copy\",\r\n                \"value\": \"\"\r\n            },\r\n            {\r\n                \"label\": \"一寸白底照片\",\r\n                \"id\": \"person_pic_white\",\r\n                \"value\": \"\"\r\n            },\r\n            {\r\n                \"label\": \"遗失证明\",\r\n                \"id\": \"lost_prove\",\r\n                \"value\": \"\"\r\n            }\r\n        ]\r\n    }\r\n}",
+        "node_next": "2",
+        "node_cate": "start",
+        "case_id": 1,
+        "do_role": "user"
+      },
+      {
+        "rec_id": 2,
+        "case_node_name": "遗失补证_用户电子签名页面",
+        "node_type": "USER_SIGN",
+        "node_detail": null,
+        "node_next": "3",
+        "node_cate": "veri",
+        "case_id": 1,
+        "do_role": "user"
+      },
+      {
+        "rec_id": 3,
+        "case_node_name": "遗失补证_管理员审核",
+        "node_type": "ADMIN_VERI_SUBMIT",
+        "node_detail": null,
+        "node_next": "4,5",
+        "node_cate": "veri",
+        "case_id": 1,
+        "do_role": "admin"
+      },
+      {
+        "rec_id": 4,
+        "case_node_name": "遗失补证，管理员审核通过，用户缴费",
+        "node_type": "USER_PAY",
+        "node_detail": null,
+        "node_next": "6",
+        "node_cate": "veri",
+        "case_id": 1,
+        "do_role": "user"
+      },
+      {
+        "rec_id": 5,
+        "case_node_name": "遗失补证_管理员审核不通过",
+        "node_type": "USER_MSG_CHECK",
+        "node_detail": null,
+        "node_next": "9",
+        "node_cate": "veri",
+        "case_id": 1,
+        "do_role": "user"
+      },
+      {
+        "rec_id": 6,
+        "case_node_name": "遗失补证_用户人脸识别页面",
+        "node_type": "USER_FACE_CHECK",
+        "node_detail": null,
+        "node_next": "7",
+        "node_cate": "veri",
+        "case_id": 1,
+        "do_role": "user"
+      },
+      {
+        "rec_id": 7,
+        "case_node_name": "遗失补证_用户缴费，后台确认缴费信息",
+        "node_type": "ADMIN_PAY_CHECK",
+        "node_detail": null,
+        "node_next": "8",
+        "node_cate": "veri",
+        "case_id": 1,
+        "do_role": "admin"
+      },
+      {
+        "rec_id": 8,
+        "case_node_name": "遗失补证_用户获得最终反馈",
+        "node_type": "USER_MSG_CHECK",
+        "node_detail": null,
+        "node_next": "9",
+        "node_cate": "veri",
+        "case_id": 1,
+        "do_role": "user"
+      },
+      {
+        "rec_id": 9,
+        "case_node_name": "遗失补证_业务结束",
+        "node_type": "END_NODE",
+        "node_detail": null,
+        "node_next": "0",
+        "node_cate": "end",
+        "case_id": 1,
+        "do_role": "user"
+      }
+    ]
+  }
+}

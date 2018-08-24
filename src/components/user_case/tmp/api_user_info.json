@@ -1,0 +1,14 @@
+{
+  "flag": true,
+  "msg": "has_user",
+  "code": 0,
+  "data": {
+    "REC_ID": 1,
+    "FORIEGN_CNAME": "赵中廷",
+    "FORIEGN_PHONENUM": "15778292670",
+    "FORIEGN_LICENSE": "450205199106211314",
+    "FORIEGN_USER_ADDR1": "北雀路",
+    "FORIEGN_USER_ADDR2": "水榭花都",
+    "PWD": "123"
+  }
+}
