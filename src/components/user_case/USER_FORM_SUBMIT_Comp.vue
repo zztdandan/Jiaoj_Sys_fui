@@ -76,12 +76,14 @@
       form_return: function(a) {
       //  console.log('form回调成功', a);
       if(a.flag){
+        // 跳转到业务概况查看页面，如果该业务可以进行下一步则在那个页面提示下一步操作
+         $.toast("信息提交成功");
          this.$router.push({name:'case_review',query:{progress_id:a.data.REC_ID}});
       }
       else{
         $.toast(a.msg);
       }
-        // 跳转到业务概况查看页面，如果该业务可以进行下一步则在那个页面提示下一步操作
+        
         
       }
     }

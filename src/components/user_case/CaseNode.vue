@@ -3,7 +3,8 @@
         <div v-bind:is="this.node_component" 
         v-bind:node_info="node_info" 
         v-bind:progress_info="progress_info"
-         v-bind:is_start="is_start"
+         v-bind:is_start="is_start" 
+         v-bind:user_info="user_info"
         ></div>
     </div>
 </template>
@@ -31,7 +32,8 @@
           progress_info: {},
           is_start: false,
           ori_title: "",
-          node_info:{}
+          node_info:{},
+          user_info:this.$store.state.user_info_ex.data
         };
       },
       computed: {
@@ -52,12 +54,13 @@
         let para_progress_id = this.$route.query.progress_id;
         this.$store.commit("set_footer", false);
 
+//读取节点信息
         if (para_node_id) {
           //获得节点信息
           this.$ajax
             .get("/api/user_view/case/node_info?case_node_id=" + para_node_id)
             .then(function(res) {
-              if (res.data && res.data.flag) {
+              if (res.data && res.data  .flag) {
                 // console.log("CaseNode--GetNode", res.data.data);
                 let node_info = res.data.data;
                 // //测试用回调
@@ -74,7 +77,22 @@
               }
             });
         }
+        
+        //读取用户信息 使用Vuex
+        if (typeof this.$store.state.user_info_ex.flag =='undefined') {
+         this.$store.commit('check_user_info');
+        
+      }
+        //  //获得用户信息
+        // that.$ajax.get('/api/user_view/user_info').then(res => {
+        //   if (!res.data || !res.data.flag) {
+        //     console.log('出现错误/api/user_view/user_info', res);
+        //     return;
+        //   }
+        //   that.progress_user_info = res.data.data;
+        // });
 
+        //读取进程信息
         if (para_progress_id && para_progress_id != "start") {
           this.$ajax
             .get(
@@ -94,8 +112,12 @@
               }
             });
         } else {
+          //para_progress_id必然存在一个值，至少是start，如果不是的话则报错
           if (para_progress_id) {
             this.is_start = true;
+          }
+          else{
+             $.toast("业务信息遗漏，页面出错");
           }
         }
       },
@@ -110,7 +132,6 @@
         "user-study": USER_STUDY_Comp,
         "user-test": USER_TEST_Comp
       },
-
       beforeDestroy: function() {
         this.$store.commit("do_change_title", this.ori_title);
       }

@@ -8,7 +8,7 @@
       <p>该业务的操作人是:{{curr_node_actor}}</p>
       <div v-if="curr_can_act">
         <p>您可以进行下一步操作，请点击下面按钮进行下一步操作</p>
-        <button class="button button-action button-rounded">下一步</button>
+        <button @click="btn_do_ondo_userclick" class="button button-action button-rounded">下一步</button>
       </div>
       <div v-else>
         <p>
@@ -94,7 +94,12 @@
       },
       //?该节点不是结束节点的话进行下一步提示，否则提示业务结束
       curr_not_end_node: function() {
-        return this.progress_ondo_node.progress_ondo_node.node_cate != 'end';
+        return this.progress_ondo_node.node_cate != 'end';
+      }
+    },
+    methods:{
+      btn_do_ondo_userclick:function(e){
+        this.$router.push({name:"case_node",query:{node_id:this.progress_ondo_node.rec_id,progress_id:this.progress_info.REC_ID}});
       }
     }
   };

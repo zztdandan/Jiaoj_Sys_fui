@@ -44,7 +44,7 @@
           title: this.params.label,
           text: '请提交如下图所示样板的图片',
           afterText:
-            `<form class="upload_pic" enctype="multipart/form-data">
+            `<form class="upload_pic`+that_vue.input_name+`" enctype="multipart/form-data">
                         <img style="width:100%" src="` +
             //!测试方便用固定值代替
             // this.params["data-example-url"] +
@@ -63,7 +63,7 @@
               text: '提交图片',
               bold: true,
               onClick: function() {
-                var formdata = new FormData($('.upload_pic')[0]);
+                var formdata = new FormData($('.upload_pic'+that_vue.input_name)[0]);
                 $.ajax({
                   type: 'post',
                   url: '/api/file_manager/uploadpic',
@@ -75,7 +75,7 @@
                     if (res.flag) {
                       //上传成功
                       that_vue.suc_flag = '成功';
-                      that_vue.url_value = res.data.path;
+                      that_vue.url_value ='/api'+ res.data.path;
                     } else {
                       that_vue.suc_flag = '上传失败，原因：' + res.msg;
                     }

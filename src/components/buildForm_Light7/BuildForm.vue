@@ -52,7 +52,7 @@ export default {
   },
   methods: {
     submit: function() {
-      console.log('进入打印', this);
+      console.log('提交', this);
     },
 
     send_to_parent: function(data) {

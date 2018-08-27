@@ -6,7 +6,21 @@
 
 <script>
     export default {
-        name:"user-msg-check"
+        name:"user-msg-check",
+         props: {
+      node_info: {
+        type: Object,
+        default: {}
+      },
+      progress_info: {
+        type: Object,
+        default: {}
+      },
+      is_start: {
+        type: Boolean,
+        default: false
+      }
+    }
     }
 </script>
 
