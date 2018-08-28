@@ -2,17 +2,18 @@
     <div class="content-block">
      <p>您的用户名是:{{this.user_info.FORIEGN_CNAME}}</p>
      <p>以下是您的业务:</p>
-
+<my-progress-card v-for="progress in progress_list" v-bind:key="progress.REC_ID" :progress_info="progress"></my-progress-card>
     </div>
 </template>
 
 <script>
+import MyProgressCard from 'components/my_progress/my_progress_card';
     export default {
       name: 'my_progress',
       data: function() {
         return {
           ori_title: '',
-          user_info: this.$store.state.user_info_ex.data,
+          user_info:{},
           progress_list: []
         };
       },
@@ -56,7 +57,10 @@
       },
       beforeDestroy: function() {
         this.$store.commit('do_change_title', this.ori_title);
-      }
+      },
+      components: {
+    'my-progress-card': MyProgressCard
+  }
     };
 </script>
 

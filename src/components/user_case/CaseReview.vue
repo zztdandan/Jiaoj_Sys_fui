@@ -8,7 +8,7 @@
       <p>该业务的操作人是:{{curr_node_actor}}</p>
       <div v-if="curr_can_act">
         <p>您可以进行下一步操作，请点击下面按钮进行下一步操作</p>
-        <button @click="btn_do_ondo_userclick" class="button button-action button-rounded">下一步</button>
+        <button @click="btn_do_ondo_click" class="button button-action button-rounded">下一步</button>
       </div>
       <div v-else>
         <p>
@@ -98,7 +98,7 @@
       }
     },
     methods:{
-      btn_do_ondo_userclick:function(e){
+      btn_do_ondo_click:function(e){
         this.$router.push({name:"case_node",query:{node_id:this.progress_ondo_node.rec_id,progress_id:this.progress_info.REC_ID}});
       }
     }
