@@ -19,7 +19,6 @@ export default new Vuex.Store({
       state.menu_title = data;
     },
     check_user_info(state) {
-
         // 没有userinfo信息
         axios.get('/api/user_view/user_info').then(res => {
           if (typeof res.data == 'undefined' || typeof res.data.flag == 'undefined') {

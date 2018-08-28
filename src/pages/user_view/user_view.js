@@ -6,7 +6,9 @@ import store from './user_store/user_store';
 import router from "./router";
 import axios from 'axios';
 import jqueryform from '#static/js/jquery.form';
+import env_err from '../../logic/env_err.js';
 Vue.prototype.$ajax=axios;
+// Vue.prototype.Err=env_err;
 /* eslint-disable no-new */
 var vm1 = new Vue({
   el: "#app",

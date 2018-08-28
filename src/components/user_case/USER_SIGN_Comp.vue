@@ -42,7 +42,7 @@
         formdata.append('sign_url', '/api/file_manager/load?id=0sample1');
         this.$ajax({
           method: 'post',
-          url: '/api/user_view/case/user_sign_up',
+          url: '/api/user_view/case/user_post_form',
           data: formdata
         }).then(function(res) {
           console.log(res);
