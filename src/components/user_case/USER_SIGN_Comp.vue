@@ -31,7 +31,8 @@
         user_info_sign: this.user_info
       };
     },
-    created: function() {},
+    created: function() {
+    },
     methods: {
       //上传签名事件
       btn_submit_sign_click: function() {
@@ -39,13 +40,19 @@
         var formdata = new FormData();
         formdata.append('case_node_id', vue_that.node_info.rec_id);
         formdata.append('user_id', vue_that.user_info_sign.REC_ID);
+        formdata.append('case_progress_id', vue_that.progress_info.REC_ID);
         formdata.append('sign_url', '/api/file_manager/load?id=0sample1');
         this.$ajax({
           method: 'post',
           url: '/api/user_view/case/user_post_form',
           data: formdata
         }).then(function(res) {
-          console.log(res);
+          if (res.data && res.data.flag) {
+            $.toast('信息提交成功');
+            vue_that.$router.push({ name: 'case_review', query: { progress_id: vue_that.progress_info.REC_ID } });
+          } else {
+            console.log(res);
+          }
         });
       }
     }

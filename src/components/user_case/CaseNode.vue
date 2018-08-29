@@ -28,7 +28,7 @@
 	      is_start: false,
 	      ori_title: '',
 	      node_info: {},
-	      user_info: this.$store.state.user_info_ex.data
+	      user_info: {}
 	    };
 	  },
 	  computed: {
@@ -72,23 +72,24 @@
 	    }
 
 	    //读取用户信息 使用Vuex
-	    if (typeof this.$store.state.user_info_ex.flag == 'undefined') {
-	      this.$store.commit('check_user_info');
-	    }
+	    // if (typeof this.$store.state.user_info_ex.flag == 'undefined') {
+	    //   this.$store.commit('check_user_info');
+	    // }
 	    //  //获得用户信息
-	    // that.$ajax.get('/api/user_view/user_info').then(res => {
-	    //   if (!res.data || !res.data.flag) {
-	    //     console.log('出现错误/api/user_view/user_info', res);
-	    //     return;
-	    //   }
-	    //   that.progress_user_info = res.data.data;
-	    // });
+	   //获得用户信息
+        that.$ajax.get('/api/user_view/user_info').then(res => {
+          if (!res.data || !res.data.flag) {
+            console.log('出现错误/api/user_view/case/case_info?cas', res);
+            return;
+          }
+          that.user_info = res.data.data;
+        });
 
 	    //读取进程信息
 	    if (para_progress_id && para_progress_id != 'start') {
 	      this.$ajax.get('/api/user_view/case/case_progress?case_progress_id=' + para_progress_id).then(function(res) {
 	        if (res.data && res.data.flag) {
-	          console.log('CaseNode--GetProgress', res.data.data);
+	          // console.log('CaseNode--GetProgress', res.data.data);
 	          let progress_info = res.data.data;
 	          // //测试用回调
 	          // that.node_detail = node_info;
