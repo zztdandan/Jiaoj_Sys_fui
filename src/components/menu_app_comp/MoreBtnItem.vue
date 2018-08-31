@@ -1,8 +1,7 @@
 <template>
 
-  <div class="new-btn" @click="push_more_router">
-    <span :class="item_detail.MENU_CLASS"></span>
-    <span class="case-item-title">{{item_detail.MENU_TITLE}}</span>
+  <div @click="push_more_router">
+    <p>{{item_detail.MENU_TITLE}}</p>
   </div>
 </template>
 

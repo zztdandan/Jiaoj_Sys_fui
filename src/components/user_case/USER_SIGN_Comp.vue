@@ -39,7 +39,8 @@
         let vue_that = this;
         var formdata = new FormData();
         formdata.append('case_node_id', vue_that.node_info.rec_id);
-        formdata.append('user_id', vue_that.user_info_sign.REC_ID);
+        formdata.append('user_id', vue_that.user_info.REC_ID);
+        formdata.append('user_name', vue_that.user_info.FORIEGN_CNAME);
         formdata.append('case_progress_id', vue_that.progress_info.REC_ID);
         formdata.append('sign_url', '/api/file_manager/load?id=0sample1');
         this.$ajax({

@@ -1,6 +1,6 @@
 <template>
     <div class="card">
-        <div class="card-header">{{this.title}}</div>
+        <div class="card-header"><slot name="header"></slot></div>
         <div class="card-content">
             <div class="card-content-inner">
                 <slot></slot>
@@ -31,7 +31,12 @@
 
 <style scoped>
 .card-header {
-  background-color: #5377ad;
-  color: white;
+  background-color: #a5a3a3;
+  color: #373737;
+  padding: 2px 5px;
+  min-height: 1.3rem;
+}
+.card-content-inner{
+    padding: 0px;
 }
 </style>

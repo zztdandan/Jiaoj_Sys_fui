@@ -4,6 +4,7 @@
     <image-block :imgurl="image_list"></image-block>
     <case-menu-block v-for="one_cate in menu_list" v-bind:key="one_cate.name" :one_cate_case_obj="one_cate">      
     </case-menu-block>
+    
   </div>
 </template>
 
@@ -17,7 +18,7 @@
       return {
         menu_cate_list: [],
         menu_list: [],
-        image_list: ["/static/home1.jpg"]
+        image_list: ["/static/newhome.jpg"]
       };
     },
     computed: {

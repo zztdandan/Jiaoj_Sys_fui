@@ -66,7 +66,7 @@
 }
 .side-background {
   background-color: #545c64;
-  height: -webkit-fill-available;
+  height: 100%;
 }
 .el-menu {
   border-right: solid 1px #545c64;

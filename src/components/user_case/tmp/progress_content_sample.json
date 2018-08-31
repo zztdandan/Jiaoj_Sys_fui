@@ -1,8 +1,8 @@
 {
   "status": [
     { "label": "节点ID", "type": "visi", "id": "case_node_id", "value": "2" },
-    { "label": "用户ID", "id": "user_id", "type": "text", "value": "undefined" },
-    { "label": "用户名", "id": "user_name", "type": "text", "value": "undefined" },
+    { "label": "用户ID", "id": "user_id", "type": "text", "value": "1" },
+    { "label": "用户名", "id": "user_name", "type": "text", "value": "赵中廷" },
     { "label": "签名地址", "id": "sign_url", "type": "image", "value": "/api/file_manager/load?id=0sample1" }
   ],
   "history": [
@@ -10,7 +10,7 @@
       { "label": "节点ID", "type": "text", "id": "case_node_id", "value": "1" },
       { "label": "姓名", "type": "text", "id": "name", "value": "赵中廷" },
       { "label": "身份证号码", "type": "text", "id": "identity", "value": "450205199106211314" },
-      { "label": "身份证(正面)", "type": "image", "id": "identity_img_front", "value": "/api/file_manager/load?id=2P2SO74T" },
+      { "label": "身份证(正面)", "type": "image", "id": "identity_img_front", "value": "/api/file_manager/load?id=JayEcjPC" },
       { "label": "身份证(反面)", "type": "image", "id": "identity_img_back", "value": "" },
       { "label": "身份证复印件", "type": "image", "id": "identity_img_copy", "value": "" },
       { "label": "一寸白底照片", "type": "image", "id": "person_pic_white", "value": "" },
@@ -18,8 +18,8 @@
     ],
     [
       { "label": "节点ID", "type": "visi", "id": "case_node_id", "value": "2" },
-      { "label": "用户ID", "id": "user_id", "type": "text", "value": "undefined" },
-      { "label": "用户名", "id": "user_name", "type": "text", "value": "undefined" },
+      { "label": "用户ID", "id": "user_id", "type": "text", "value": "1" },
+      { "label": "用户名", "id": "user_name", "type": "text", "value": "赵中廷" },
       { "label": "签名地址", "id": "sign_url", "type": "image", "value": "/api/file_manager/load?id=0sample1" }
     ]
   ]
