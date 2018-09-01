@@ -1,6 +1,7 @@
 <template>
     <div>
         <card-common :title="this.progress_info.PROGRESS_NAME" :has_foot="hasfoot">
+          <template slot="header">{{this.progress_info.PROGRESS_NAME}}</template>
             <p>该业务当前进度:</p>
             {{case_node_info.case_node_name}}
             <p v-if="curr_can_act">当前节点你可以进入操作</p>

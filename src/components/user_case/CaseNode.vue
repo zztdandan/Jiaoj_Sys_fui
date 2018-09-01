@@ -10,7 +10,7 @@
 	import USER_FACE_CHECK_Comp from './USER_FACE_CHECK_Comp';
 	import USER_FORM_SUBMIT_Comp from './USER_FORM_SUBMIT_Comp';
 	import USER_MSG_CHECK_Comp from './USER_MSG_CHECK_Comp';
-	import USER_PASS_Comp from './USER_PASS_Comp';
+
 	import USER_PAY_Comp from './USER_PAY_Comp';
 	import USER_SIGN_Comp from './USER_SIGN_Comp';
 	import USER_STUDY_Comp from './USER_STUDY_Comp';
@@ -113,7 +113,6 @@
 	    'user-face-check': USER_FACE_CHECK_Comp,
 	    'user-form-submit': USER_FORM_SUBMIT_Comp,
 	    'user-msg-check': USER_MSG_CHECK_Comp,
-	    'user-pass': USER_PASS_Comp,
 	    'user-pay': USER_PAY_Comp,
 	    'user-sign': USER_SIGN_Comp,
 	    'user-study': USER_STUDY_Comp,

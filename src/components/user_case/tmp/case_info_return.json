@@ -1,8 +1,8 @@
 {
-  "has_advise":false,
+  "has_advise":true,
   "act_group":[
-    {"name":"pass","label":"确认缴费","condition":"","class":"button button-primary button-rounded"},
-   
+    {"name":"pass","label":"通过","condition":"pass","class":"button button-primary button-rounded"},
+    {"name":"nopass","label":"不通过","condition":"nopass","class":"button button-caution button-rounded"}
   ],
   "Return_json": {
     "form": [
@@ -15,12 +15,18 @@
       {
         "label": "审批人ID",
         "id": "admin_id",
-        "type":"text",
+        "type":"visi",
         "value": ""
       },
       {
         "label": "审批人姓名",
         "id": "admin_name",
+        "type":"text",
+        "value": ""
+      },
+      {
+        "label": "审批结果",
+        "id": "veri_result",
         "type":"text",
         "value": ""
       },
