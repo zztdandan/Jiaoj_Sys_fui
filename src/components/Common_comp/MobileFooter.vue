@@ -25,4 +25,11 @@ export default {
 </script>
 
 <style scoped>
+.bar.bar-tab {
+  background: #0a4b8b;
+
+}
+span{
+      color: white;
+}
 </style>

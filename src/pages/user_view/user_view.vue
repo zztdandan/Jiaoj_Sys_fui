@@ -5,7 +5,7 @@
     <div id="vuecontent" class="page">
       <simple-header>{{title}}</simple-header>
       <simple-footer v-if="has_footer"></simple-footer>
-      <div class="content">
+      <div class="content" style="  background: #fff;">
         <router-view></router-view>
       </div>
     </div>
@@ -14,36 +14,41 @@
 </template>
 
 <script>
-  import MobileFooter from "components/Common_comp/MobileFooter";
-  import MobileHeader from "components/Common_comp/MobileHeader";
-  
+import MobileFooter from 'components/Common_comp/MobileFooter';
+import MobileHeader from 'components/Common_comp/MobileHeader';
 
-  export default {
-    name: "app",
-    components: {
-      "simple-header": MobileHeader,
-      "simple-footer": MobileFooter
+export default {
+  name: 'app',
+  components: {
+    'simple-header': MobileHeader,
+    'simple-footer': MobileFooter
+  },
+  data: function() {
+    return {};
+  },
+  computed: {
+    has_footer: function() {
+      return this.$store.state.has_footer;
     },
-    data: function() {
-      return {};
-    },
-    computed: {
-      has_footer: function() {
-        return this.$store.state.has_footer;
-      },
 
-      title: function() {
-        if (this.$store.state.menu_title) {
-          return this.$store.state.menu_title;
-        } else {
-          return "用户页面";
-        }
+    title: function() {
+      if (this.$store.state.menu_title) {
+        return this.$store.state.menu_title;
+      } else {
+        return '用户页面';
       }
-    },
-    created: function() {
     }
-  };
+  },
+  created: function() {}
+};
 </script>
 
 <style>
+body {
+  background: white;
+}
+.content {
+  margin-top: 2rem;
+
+}
 </style>

@@ -20,11 +20,12 @@
       // console.log(this.item_detail.MENU_URL + this.item_detail.MENU_ID);
       // console.log(1);
       var s = parseFloat($(".new-btn").css("width"));
-      $(".new-btn").css("height", s*1);
-      $(".menu-icon").css("font-size", s * 0.6);
+      $(".new-btn").css("height", s*0.8);
+      $(".menu-icon").css("font-size", s * 0.3);
       $(".menu-icon").css("line-height", 1);
-      $(".case-item-title").css("font-size", s * 0.15);
-      $(".case-item-title").css("line-height", 1);
+      $(".case-item-title").css("font-size", s *0.1);
+      $(".case-item-title").css("line-height", 1.1);
+      $(".case-item-title").css("margin-top",".3rem");
     },
     updated: function() {},
     methods: {
@@ -39,7 +40,7 @@
 .new-btn {
   text-align: center;
   padding: 0.3rem;
-  border: solid 1px #a5a3a3;
+  /* border: solid 1px #a5a3a3; */
   margin: -1px -0.5px;
 }
 .menu-icon {

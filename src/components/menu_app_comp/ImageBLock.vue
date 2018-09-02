@@ -25,7 +25,7 @@ img {
 }
 .img-block{
     display:block;
-    margin: -9px;
+    margin: -6px;
 }
 </style>
 

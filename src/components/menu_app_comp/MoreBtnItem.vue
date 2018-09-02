@@ -16,12 +16,12 @@
     },
     mounted: function() {
       // console.log(1);
-      var s = parseFloat($(".new-btn").css("width"));
-      $(".new-btn").css("height", s*1.2);
-      $(".menu-icon").css("font-size", s * 0.75);
-      $(".menu-icon").css("line-height", 1.1);
-      $(".case-item-title").css("font-size", s *0.15);
-      $(".case-item-title").css("line-height", 1);
+      // var s = parseFloat($(".new-btn").css("width"));
+      // $(".new-btn").css("height", s*1.2);
+      // $(".menu-icon").css("font-size", s * 0.75);
+      // $(".menu-icon").css("line-height", 1.1);
+      // $(".case-item-title").css("font-size", s *0.15);
+      // $(".case-item-title").css("line-height", 1);
     },
     methods: {
       push_more_router: function() {

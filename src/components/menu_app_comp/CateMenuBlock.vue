@@ -60,9 +60,6 @@
   };
 </script>
 <style scoped>
-.card{
-  margin: 0px;
-}
 .pull-right{
   float:right;
   margin-right:0.75rem;
@@ -70,6 +67,10 @@
 .col25{
   float: left;
   width: 25%;
+}
+.row {
+    margin-left: 0px;
+    margin-right: 0px;
 }
 </style>
 

@@ -31,12 +31,20 @@
 
 <style scoped>
 .card-header {
-  background-color: #a5a3a3;
+  background-color: #ffffff;
   color: #373737;
   padding: 2px 5px;
   min-height: 1.3rem;
+  border-radius: .5rem;
+      border-bottom: 0px solid #e1e1e1;
+      font-size:.6rem;
 }
 .card-content-inner{
     padding: 0px;
+}
+.card{
+    border-radius: .5rem;
+    box-shadow: 0 0.3 0.3rem rgba(0, 0, 0, .4);
+
 }
 </style>

@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'lzjiaoj';
-  src:  url('fonts/lzjiaoj.eot?wpku4d');
-  src:  url('fonts/lzjiaoj.eot?wpku4d#iefix') format('embedded-opentype'),
-    url('fonts/lzjiaoj.ttf?wpku4d') format('truetype'),
-    url('fonts/lzjiaoj.woff?wpku4d') format('woff'),
-    url('fonts/lzjiaoj.svg?wpku4d#lzjiaoj') format('svg');
+  src:  url('fonts/lzjiaoj.eot?lm6s9y');
+  src:  url('fonts/lzjiaoj.eot?lm6s9y#iefix') format('embedded-opentype'),
+    url('fonts/lzjiaoj.ttf?lm6s9y') format('truetype'),
+    url('fonts/lzjiaoj.woff?lm6s9y') format('woff'),
+    url('fonts/lzjiaoj.svg?lm6s9y#lzjiaoj') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -88,4 +88,16 @@
 }
 .lzjiaoj-user:before {
   content: "\e971";
+}
+.lzjiaoj-backward2:before {
+  content: "\ea1f";
+}
+.lzjiaoj-arrow-left:before {
+  content: "\ea38";
+}
+.lzjiaoj-arrow-left2:before {
+  content: "\ea40";
+}
+.lzjiaoj-circle-left:before {
+  content: "\ea44";
 }
