@@ -18,9 +18,11 @@
 
 <script>
 // 引入 axios
-import ImageBlock from './ImageBlock';
-import CateMenuBlock from './CateMenuBlock';
-import SidePanel from './side_panel';
+
+import ImageBlock from '@/components/menu_app_comp/ImageBlock'
+import SidePanel from '@/components/menu_app_comp/SidePanel'
+import CateMenuBlock from '@/components/menu_app_comp/CateMenuBlock'
+
 export default {
   name: 'menu_app',
   data: function() {

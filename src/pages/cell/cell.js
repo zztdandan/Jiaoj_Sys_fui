@@ -1,4 +1,4 @@
-import Vue from 'Vue'
+import Vue from 'vue'
 import cell from './cell.vue'
 
 /* eslint-disable no-new */
