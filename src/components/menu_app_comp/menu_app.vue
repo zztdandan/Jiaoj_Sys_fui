@@ -19,7 +19,7 @@
 <script>
 // 引入 axios
 
-import ImageBlock from 'components/menu_app_comp/ImageBlock'
+import ImageBLock from 'components/menu_app_comp/ImageBLock'
 // import SidePanel from '@/components/menu_app_comp/SidePanel'
 import CateMenuBlock from '@/components/menu_app_comp/CateMenuBlock'
 
@@ -51,7 +51,7 @@ export default {
     });
   },
   components: {
-    'image-block': ImageBlock,
+    'image-block': ImageBLock,
     'case-menu-block': CateMenuBlock
   }
 };
