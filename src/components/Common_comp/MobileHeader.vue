@@ -44,7 +44,7 @@ header {
 }
 .bar {
   background-color: #0a4b8b;
-  border-bottom: 0px solid #e7e7e7;
+  border-bottom: 0px solid #ffffff;
 }
 .header-farther {
   padding: 0%;
@@ -75,6 +75,6 @@ header {
   z-index: 20;
   margin-top: 0;
   font-weight: 400;
-  color: #e7e7e7;
+  color: #ffffff;
 }
 </style>

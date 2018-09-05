@@ -1,6 +1,6 @@
 <template>
   <!-- 每个大类卡片归类为一个组件 -->
-  <div :id="cate_id">
+  <div :id="cate_id" v-if="one_cate_case_obj.has_add">
     <card-common :title="case_title">
       <template slot="header">
         <p>{{case_title}}</p>

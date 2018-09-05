@@ -41,5 +41,8 @@
 /* 由于light7的性质很讨厌，所以大部分引用采用在html全局引用方式，buttons和light7冲突，需要在它下方引入，必须在全局才有效 */
 /* @import "#static/light7/css/light7.min.css"; */
 /* @import "#static/css/buttons.css"; */
-
+.content {
+  margin-top: 2rem;
+  background: white;
+}
 </style>

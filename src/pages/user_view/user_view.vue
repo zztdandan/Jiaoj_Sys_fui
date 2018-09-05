@@ -49,6 +49,6 @@ body {
 }
 .content {
   margin-top: 2rem;
-
+  background: white;
 }
 </style>
